@@ -1,0 +1,140 @@
+@import "../scss/resets";
+@import "../scss/variables";
+@import "../scss/starter";
+
+body {
+  background: #f6f6f8;
+}
+
+header {
+  justify-content: flex-start;
+  background: transparent;
+}
+
+.heading-text {
+  text-align: left;
+  font-family: font(heading);
+  font-size: size(subheading);
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.heading-line {
+  margin-left: 0;
+  width: 100px;
+  border: none;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+input {
+  width: 450px;
+  height: 40px;
+  box-sizing: border-box;
+  color: $nav-color;
+  font-family: font(nav);
+  font-size: size(nav);
+  font-weight: 300;
+  text-indent: 25px;
+  margin-bottom: 10px;
+  outline-color: $primary-color;
+  caret-color: $primary-color;
+  background: rgba(246, 246, 248, 0.25);
+  border: 1px solid rgba(0, 153, 15, 0.35);
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: $link-color;
+  font-family: font(nav);
+  font-size: size(nav);
+  font-weight: 300;
+}
+
+main {
+  @include flexCenter;
+  margin-top: 50px;
+}
+
+.outer-box {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: -2px 4px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 70px 45px 40px 45px;
+
+  @include flexCenter();
+  align-items: flex-start;
+  .last {
+    margin-top: 15px;
+    font-family: font(nav);
+    font-size: size(list)-2;
+    span {
+      color: $primary-color;
+      opacity: 50%;
+      font-weight: 700;
+    }
+  }
+}
+
+label {
+  font-family: font(form);
+  font-size: size(list);
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+label:nth-of-type(1) {
+  margin-top: 30px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: $link-color;
+  opacity: 0.2;
+}
+
+.social {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  @include flexCenter(row, space-between);
+  button {
+    width: 220px;
+    height: 40px;
+    font-family: font(form);
+    @include flexCenter(row, center, center);
+    background: rgba(246, 246, 248, 0.25);
+    border: 1px solid rgba(0, 153, 15, 0.35);
+    border-radius: 5px;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  opacity: 50%;
+  border-color: $primary-color;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+#background {
+  position: absolute;
+  right: 200px;
+  z-index: -1;
+}

@@ -1,0 +1,129 @@
+@import "../scss/resets";
+@import "../scss/variables";
+@import "../scss/starter";
+
+main {
+  margin-top: 50px;
+  width: 70%;
+  height: auto;
+  @include flexCenter(row);
+}
+
+.info {
+  @include flexCenter();
+  margin-left: 40px;
+}
+
+.buttons {
+  @include flexCenter(row, space-between);
+  margin-bottom: 10px;
+
+  button {
+    width: 150px;
+    height: 60px;
+    margin-right: 10px;
+  }
+}
+
+.info-box {
+  background: rgba(196, 196, 196, 0.06);
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+  padding: 30px 35px;
+  box-sizing: border-box;
+
+  p {
+    margin-top: 15px;
+    font-family: font(nav);
+    font-size: size(list)-2;
+    span {
+      color: $primary-color;
+      opacity: 50%;
+      font-weight: 700;
+    }
+  }
+}
+
+.heading-text {
+  text-align: left;
+  font-family: font(heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.services-list {
+  @include flexCenter(column, center, flex-start);
+  margin-top: 15px;
+}
+.services-item {
+  @include flexCenter(row, center, center);
+  padding: 12px 0;
+  color: #909090;
+  font-family: font(para);
+  font-weight: 300;
+  font-size: calc(size(list) + 2);
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.heading-line {
+  margin-left: 0;
+  width: 50px;
+  border: none;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+.amount {
+  @include flexCenter(row, space-between);
+  margin-top: 35px;
+  margin-bottom: 10px;
+  h2 {
+    font-size: size(para);
+    font-weight: 300;
+  }
+}
+
+.sessions-hr {
+  border: none;
+  background-color: $link-color;
+  height: 0.5px;
+  margin-bottom: 15px;
+}
+
+.last-button {
+  background: $primary-color;
+  opacity: 50%;
+  border-color: $primary-color;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.header-button {
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: #fff;
+  font-family: font(nav);
+  font-size: size(list);
+}
+
+.disabled {
+  background-color: $secondary-color;
+}
+
+button {
+  cursor: pointer;
+}
+
+#daily,
+#community {
+  display: none;
+}

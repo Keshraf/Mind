@@ -1,0 +1,66 @@
+$primary-color: #00990f;
+$secondary-color: #70e000;
+$nav-color: #404040;
+$link-color: #909090;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;600;700&family=Playfair+Display:wght@400;500;700&family=Poiret+One&family=Poppins:wght@100;300;400;500;700&display=swap");
+
+$font-styles: (
+  heading: "Playfair Display",
+  subheading: "Poiret One",
+  para: "Lato",
+  form: "Poppins",
+  nav: "Montserrat",
+);
+
+$font-size: (
+  heading: 80px,
+  para: 20px,
+  action: 22px,
+  subheading: 60px,
+  list: 14px,
+);
+
+@function font($type) {
+  @return map-get($font-styles, $type);
+}
+
+@function size($type) {
+  @return map-get($font-size, $type);
+}
+
+@mixin flexCenter($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button($type: "action", $font-length: "list", $width: 150px) {
+  @include flexCenter(row);
+  cursor: pointer;
+  width: $width;
+  height: 40px;
+  font-family: font(text);
+  font-size: size($font-length) + 2px;
+  font-weight: 400;
+  border-style: solid;
+  border-radius: 6px;
+  @if $type == "action" {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    color: #fff;
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  } @else if $type == "regular" {
+    background-color: transparent;
+    border-color: $secondary-color;
+    color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: #fff;
+    }
+  }
+}
