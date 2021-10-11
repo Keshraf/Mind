@@ -7,6 +7,7 @@ A Website made as an submission to Envisage - Web Warriors
 3. JavaScript
 4. Chart.js
 5. SCSS
+6. Three.js
 
 #### Links
 1. [Document](https://docs.google.com/document/d/1cPSqivzyVMHGJ9i0i23BYHV9034sl-_wJIHx4qlhu3M/edit?usp=sharing)
