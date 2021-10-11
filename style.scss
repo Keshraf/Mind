@@ -1,0 +1,219 @@
+@import "./scss/resets";
+@import "./scss/variables";
+@import "./scss/starter";
+
+/* #particles-js {
+  width: 500px;
+  height: 500px;
+  background: #fff;
+} */
+
+.first-section {
+  @include flexCenter(row, space-between);
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+
+.info-first {
+  @include flexCenter(column, flex-start, flex-start);
+  width: 50%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.heading-text {
+  text-align: left;
+  font-family: font(heading);
+  font-size: size(heading);
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.heading-line {
+  margin-left: 0;
+  width: 100px;
+  border: none;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+.heading-para {
+  margin: 15px 200px 30px 0;
+  font-size: size(para);
+  font-family: font(para);
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.action-button {
+  @include button();
+}
+
+.heading-visuals {
+  width: 50%;
+  height: auto;
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.second-section {
+  width: 68%;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.second-carousel {
+  @include flexCenter(row, space-between, center);
+}
+
+.carousel-heading {
+  top: 110px;
+  font-family: font(subheading);
+  font-size: size(subheading);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-text {
+  position: relative;
+  color: #fff;
+  font-family: font(para);
+  font-weight: 600;
+  bottom: 35px;
+  right: 35px;
+  text-align: right;
+}
+
+.third-section {
+  background-image: url(./images/parallax-image.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  @include flexCenter(row);
+}
+
+.services-box {
+  width: 75%;
+  height: auto;
+  @include flexCenter(row, space-evenly, center);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 0px 47px 2px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+}
+
+.daily-service {
+  @include flexCenter();
+  width: calc(100% / 3);
+  margin: 100px auto;
+
+  .services-button {
+    @include button("regular", "list", 100px);
+    margin-top: 35px;
+  }
+  .services-action {
+    @include button("action", "list", 100px);
+    margin-top: 35px;
+  }
+}
+
+.services-heading {
+  text-align: center;
+  font-family: font(heading);
+  font-size: 40px;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 10px;
+}
+
+.services-hr {
+  width: 100px;
+  border: none;
+  height: 5px;
+  background-color: $secondary-color;
+  margin-bottom: 30px;
+}
+
+.services-list {
+  @include flexCenter(column, center, flex-start);
+}
+.services-item {
+  @include flexCenter(row, center, center);
+  padding: 12px 0;
+  color: #909090;
+  font-family: font(para);
+  font-weight: 300;
+  font-size: calc(size(list) + 2);
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.fourth-section,
+.fifth-section {
+  @include flexCenter(row, space-evenly);
+  width: 70%;
+  margin-top: 70px;
+  div {
+    width: 50%;
+    height: auto;
+  }
+}
+
+#email {
+  width: 300px;
+  height: 40px;
+  border: 1px solid rgba(112, 224, 0, 0.95);
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: $nav-color;
+  font-family: font(nav);
+  font-size: size(nav);
+  font-weight: 300;
+  text-indent: 25px;
+  margin-bottom: 10px;
+  outline-color: $primary-color;
+  caret-color: $primary-color;
+}
+
+#email::placeholder {
+  color: $link-color;
+  font-family: font(nav);
+  font-size: size(nav);
+  font-weight: 300;
+}
+.float-dots {
+  width: 100px;
+  height: auto;
+  @include flexCenter();
+  position: fixed;
+  right: 120px;
+  top: 45%;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: $link-color;
+  margin-bottom: 35px;
+  @include flexCenter(row, flex-start, center);
+}
+
+.dot-text {
+  visibility: hidden;
+  position: relative;
+  left: 15px;
+  font-family: font(nav);
+  font-size: 12px;
+}
