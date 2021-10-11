@@ -10,7 +10,7 @@ A Website made as an submission to Envisage - Web Warriors
 
 #### Links
 1. [Document](https://docs.google.com/document/d/1cPSqivzyVMHGJ9i0i23BYHV9034sl-_wJIHx4qlhu3M/edit?usp=sharing)
-2. [Video]
+2. [Video](https://youtu.be/KrFgop4VTtE)
 
 ### Main Page
 ![image](https://user-images.githubusercontent.com/82109991/136834952-f7e5540b-8cc7-402d-8c91-f010549c622a.png)
