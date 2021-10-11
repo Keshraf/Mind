@@ -1,0 +1,54 @@
+@import "../scss/resets";
+@import "../scss/variables";
+@import "../scss/starter";
+
+main {
+  @include flexCenter();
+  width: 90%;
+}
+.fifth-section {
+  @include flexCenter(row, space-evenly);
+  width: 70%;
+  margin-top: 70px;
+  div {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.heading-visuals {
+  width: 50%;
+  height: auto;
+
+  img {
+    width: 70%;
+    height: auto;
+  }
+  &:nth-child(2) {
+    @include flexCenter(row, flex-end);
+  }
+}
+
+.heading-text {
+  text-align: left;
+  font-family: font(heading);
+  font-size: size(heading);
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.heading-line {
+  margin-left: 0;
+  width: 100px;
+  border: none;
+  height: 5px;
+  background-color: $secondary-color;
+}
+
+.heading-para {
+  margin: 25px 50px 30px 0;
+  font-size: size(para);
+  font-family: font(para);
+  font-weight: 300;
+  line-height: 26px;
+}
