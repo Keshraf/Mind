@@ -5,5 +5,7 @@ These interactions were made possible by using Three.js - a JavaScript Library: 
 
 Course where I learned Three.js: [Course](https://threejs-journey.com/)
 
+**IMPORTANT:** After downloading the `.zip` file please run the code on a live server. The Meditation Room can't be viewed withut a live server. 
+
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/82109991/136892081-a629080b-0987-47fa-91b8-41a00b4b1253.png)
